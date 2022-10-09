@@ -1,4 +1,5 @@
 var _yt_player = {};
+window.console.log("hi");
 (function(g) {
 	var window = this;
 	/*
@@ -41491,6 +41492,7 @@ var _yt_player = {};
 		this.callbacks = a;
 		this.j = new cC
 	};
+	window.console.log("YAY");
 	KV = function(a, b, c) {
 		var d = this;
 		c = void 0 === c ? {} : c;
@@ -41503,8 +41505,8 @@ var _yt_player = {};
 			a = c.headers;
 			b = g.t(Object.keys(a));
 			for (var e = b.next(); !e.done; e = b.next()) {
-				console.log("HEADER FOR RR--:", e, a[e])
-				e = e.value, this.xhr.setRequestHeader(e, a[e])
+				window.console.log("HEADER FOR RR--:", e, a[e]);
+				e = e.value, this.xhr.setRequestHeader(e, a[e]);
 			};
 		}
 		this.xhr.responseType = "arraybuffer";
