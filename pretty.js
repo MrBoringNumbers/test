@@ -41502,7 +41502,10 @@ var _yt_player = {};
 		if (c.headers) {
 			a = c.headers;
 			b = g.t(Object.keys(a));
-			for (var e = b.next(); !e.done; e = b.next()) e = e.value, this.xhr.setRequestHeader(e, a[e])
+			for (var e = b.next(); !e.done; e = b.next()) {
+				console.log("HEADER FOR RR--:", e, a[e])
+				e = e.value, this.xhr.setRequestHeader(e, a[e])
+			};
 		}
 		this.xhr.responseType = "arraybuffer";
 		this.xhr.withCredentials = !0;
